@@ -1,0 +1,58 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color:#336dd5;
+    --white:#FFFFFF;
+    --text-color:#060606;
+}
+
+.dark-mode {
+    background-color: #0F183A;
+    color: var(--white);
+    transition: all .4s ease-in-out ;
+}
+
+.dark-mode input {
+    background-color: #0F183A;
+    color: #3F4661;
+    border-color: #3F4661;
+    transition: all .4s ease-in-out ;
+}
+
+.dark-mode textarea {
+    background-color: #0F183A;
+    color: #3F4661;
+    border-color: #3F4661;
+    transition: all .4s ease-in-out ;
+}
+
+.light-mode {
+    background-color: var(--white);
+    color: var(--text-color);
+    transition: all .4s ease-in-out ;
+}
+
+.light-mode input {
+    background-color: var(--white);
+    color: var(--text-color);
+    border-color: #EEEEEE;
+    transition: all .4s ease-in-out ;
+}
+
+button:hover{
+    text-decoration: .3s ;
+    transition: .5s all;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
+    background: transparent; 
+  }
+  
