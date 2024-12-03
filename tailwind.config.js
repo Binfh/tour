@@ -28,7 +28,7 @@ export default {
         'half': '0.5px', 
       },
       screens: {
-      'bb': { max: '639px' },
+      'bb': '320px',
       },
     },
   },

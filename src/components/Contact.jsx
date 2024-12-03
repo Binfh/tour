@@ -43,7 +43,7 @@ const Contact = () => {
                 <p className='text-[32px] leading-[26px] font-greatVibes text-main text-center'>Contact Us</p>
                 <h3 className='text-[38px] leading-10 font-Ubuntu text-center font-medium'>Get In Touch</h3>
             </div>
-            <div className='py-12 px-[15px] mx-auto xl:max-w-[1200px] sm:max-w-[740px] lg:max-w-[960px] grid sm:grid-cols-3 bb:grid-cols-1 gap-5 items-center'>
+            <div className='py-12 px-[15px] mx-auto xl:max-w-[1200px] sm:max-w-[740px] lg:max-w-[960px] grid lg:grid-cols-3 bb:grid-cols-1 gap-5 items-center'>
                 <div className={`flex ${darkMode ?'bg-[#0f183a]':'bg-white'} rounded-lg p-[30px] ${darkMode ?'shadow-custom':'shadow-custom1' } h-full `}>
                     <FontAwesomeIcon className='text-[40px] text-main' icon={faMapMarkedAlt}/>
                     <div className='ml-5'>

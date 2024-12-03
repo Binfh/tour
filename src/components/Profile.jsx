@@ -26,7 +26,7 @@ const Profile = () => {
       <div className='mt-[90px] relative'>
         <img className='w-full object-cover h-[288px] ' src={assets.bg_profile}/>
         <div className={`absolute inset-0 ${darkMode ? 'bg-[#67697A] bg-opacity-50' : 'bg-transparent'} z-10`} />
-        <div className='absolute top-0 sm:mx-20 w-full pr-[15px] lg:max-w-[1200px] sm:max-w-[540px] lg:pt-0 sm:pt-[30%] bb:ml-0 z-20'>
+        <div className='absolute lg:top-[110px] sm:top-[-150px] bb:top-[90px] bb:pl-4 sm:mx-20 w-full pr-[15px] lg:max-w-[1200px] sm:max-w-[540px] lg:pt-0 sm:pt-[30%] bb:ml-0 z-20'>
           <h4 className='mb-1 font-greatVibes text-[38px] pt-[48px]'>Profile</h4>
           <ul className='flex items-center'>
             <li className='font-bold text-[15px] capitalize hover:text-main hover:transition-all duration-500'><Link onClick={() => setSignUp(true)} to={'/'}>Home</Link></li>

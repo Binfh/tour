@@ -74,17 +74,17 @@ const Map = () => {
         <div className="relative py-12 h-height-map">
             <div className="absolute inset-0 bg-[#0e2244] z-[0]"></div>
             <img className='absolute w-full object-cover h-full top-[1px]' src={assets.map} alt='' />
-            <div className='absolute w-full px-[15px] py-12 mx-auto'>
+            <div className='absolute w-full px-[15px] sm:py-12 bb:py-0 mx-auto'>
                 <div className='max-w-[600px] mb-12 mx-auto text-center'>
                     <p className='text-[32px] font-greatVibes text-main'>Statistics</p>
                     <h3 className='font-Ubuntu text-[38px] leading-[46px] text-white'>We have over 10 years Experience</h3>
                 </div>
-                <div ref={counterRef} className='py-6 flex flex-wrap items-center justify-center mx-auto'>
+                <div ref={counterRef} className='sm:py-6 bb:pb-2 bb:pt-0 flex flex-wrap items-center justify-center mx-auto'>
                     {counters.map((counter, index) => (
                         <div key={index} className='px-3 sm:w-1/4 bb:w-1/2 bb:pt-4 text-center'>
-                            <FontAwesomeIcon className='text-white text-[32px] font-black leading-[80px] p-[25px] rounded-[50%] bg-[#ffffff2b]' icon={counter.icon} />
-                            <div className='text-5xl font-bold leading-[72px] text-white'>{counts[index]}<span>+</span></div>
-                            <div className='text-[#fbfbfb] text-lg font-normal'>{counters[index].des}</div>
+                            <FontAwesomeIcon className='text-white sm:text-[32px] bb:text-[16px] font-black leading-[80px] p-[25px] rounded-[50%] bg-[#ffffff2b]' icon={counter.icon} />
+                            <div className='sm:text-5xl bb:text-2xl font-bold leading-[72px] text-white'>{counts[index]}<span>+</span></div>
+                            <div className='text-[#fbfbfb] sm:text-lg bb:text-sm font-normal'>{counters[index].des}</div>
                         </div>
                     ))}
                 </div>

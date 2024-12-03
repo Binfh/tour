@@ -56,3 +56,9 @@ select {
     background: transparent; 
   }
   
+@media (min-width: 320px) and (max-width :640px) {
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+}

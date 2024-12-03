@@ -32,7 +32,7 @@ const Slider = () => {
             <SwiperSlide key={index} className='relative'>
                 <img src={slider.img} alt="Banner 1" className="w-screen h-height-slider object-cover" />
                 <div className={`absolute inset-0 ${darkMode ? 'bg-[#67697A] bg-opacity-50' : 'bg-transparent'} z-10`} />
-                <div className='absolute top-[120px] sm:mx-20 w-full px-[15px] lg:max-w-[1200px] sm:max-w-[540px] lg:pt-0 sm:pt-[30%] bb:ml-0 z-20'>
+                <div className='absolute top-[120px] sm:mx-20 w-full px-[15px] lg:max-w-[1200px] sm:max-w-[540px] lg:pt-0 sm:pt-[5%] bb:ml-0 z-20'>
                   <h3 className='lg:text-[75px] font-medium lg:leading-[85px] font-greatVibes bb:text-[45px] bb:leading-[55px]'>{slider.title} </h3>
                   <p className='text-[18px] leading-[26px]'>{slider.des}</p>
                   <Link to="/tour" className='bg-main border-main text-white border-2 border-solid rounded-[30px] hover:text-[#4378d8] hover:bg-transparent transition-all duration-[1500ms] ease-in-out inline-block font-bold leading-[24px] mt-[48px] px-[28px] py-[10px] text-center'>Explore More</Link>

@@ -32,48 +32,79 @@ const FeaturedTours = () => {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Autoplay]}
           breakpoints={{
-            320: { 
-              slidesPerView: 1, 
+            320: {
+              slidesPerView: 1,
             },
-            768: { 
-              slidesPerView: 2, 
-              spaceBetween: 15, 
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 15,
             },
-            1024: { 
-              slidesPerView: 4, 
-              spaceBetween: 20, 
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
             },
           }}
         >
           {tours.map((tour, idx) => (
             <SwiperSlide key={idx}>
-              <div className='overflow-hidden mx-[1px] group cursor-auto'>
+              <div className="h-full flex flex-col justify-between mx-[1px] border border-gray-200 rounded-lg overflow-hidden group">
                 <Link to={`/tour/${tour.id}`}>
-                  <img className='block transition-transform duration-300 ease-linear rounded-t-lg w-full cursor-pointer group-hover:scale-105' src={tour.image} alt={tour.title} />
-                </Link>
-                <div className='py-5 px-[15px] bg-white rounded-b-[8px] border-t-transparent'>
-                  <ul className='mb-2 flex items-center'>
-                    {[...Array(4)].map((_, i) => (
-                      <li key={i}><FontAwesomeIcon className='mr-1 z-10 text-yellow-400' icon={faStar} /></li>
-                    ))}
-                    <li><FontAwesomeIcon className='mr-1 z-10 text-yellow-400' icon={faStarHalfStroke} /></li>
-                    <li className='ml-1 text-[#8c8c8c]'>{tour.rating}</li>
-                  </ul>
-                  <Link to={`/tour/${tour.id}`} className='text-xl leading-7 font-semibold text-text-color cursor-pointer group-hover:text-main'>{tour.title}</Link>
-                  <p className='mt-1 text-base leading-[26px] text-[#8c8c8c]'><FontAwesomeIcon className='!text-main mr-1' icon={faLocationDot} />{tour.location}</p>
-                  <div className='mt-2'>
-                    <label className='text-[#8c8c8c] mr-1'>From</label>
-                    <span className='text-main text-2xl font-bold'>{tour.price}</span>
+                  <div className="overflow-hidden rounded-t-lg">
+                    <img
+                      className="block transition-transform duration-300 ease-linear w-full cursor-pointer group-hover:scale-105 rounded-t-lg"
+                      src={tour.image}
+                      alt={tour.title}
+                    />
                   </div>
-                  <div className='mt-6 flex justify-between items-center'>
-                    <p className='text-[15px] leading-[26px] text-[#8c8c8c]'><FontAwesomeIcon icon={faClock} className='!text-main mr-1' />{tour.duration}</p>
-                    <Link to={`/tour/${tour.id}`} className='text-main font-semibold leading-6 cursor-pointer'>Explore <FontAwesomeIcon icon={faRightLong} /></Link>
+                </Link>
+                <div className="flex-grow flex flex-col justify-between py-5 px-[15px] bg-white rounded-b-lg">
+                  <ul className="mb-2 flex items-center">
+                    {[...Array(4)].map((_, i) => (
+                      <li key={i}>
+                        <FontAwesomeIcon className="mr-1 text-yellow-400" icon={faStar} />
+                      </li>
+                    ))}
+                    <li>
+                      <FontAwesomeIcon className="mr-1 text-yellow-400" icon={faStarHalfStroke} />
+                    </li>
+                    <li className="ml-1 text-gray-500">{tour.rating}</li>
+                  </ul>
+
+                  <Link
+                    to={`/tour/${tour.id}`}
+                    className="text-xl font-semibold text-gray-800 leading-6 group-hover:text-main mb-2"
+                  >
+                    <div className="min-h-[48px] flex items-center">{tour.title}</div>
+                  </Link>
+
+                  <p className="mt-1 text-sm text-gray-600 flex items-center">
+                    <FontAwesomeIcon className="text-main mr-1" icon={faLocationDot} />
+                    {tour.location}
+                  </p>
+
+                  <div className="mt-4">
+                    <span className="text-sm text-gray-500 mr-1">From</span>
+                    <span className="text-main text-2xl font-bold">{tour.price}</span>
+                  </div>
+
+                  <div className="mt-6 flex justify-between items-center">
+                    <p className="text-sm text-gray-500 flex items-center">
+                      <FontAwesomeIcon className="text-main mr-1" icon={faClock} />
+                      {tour.duration}
+                    </p>
+                    <Link
+                      to={`/tour/${tour.id}`}
+                      className="text-main font-semibold text-sm"
+                    >
+                      Explore <FontAwesomeIcon icon={faRightLong} />
+                    </Link>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
+
       </div>
     </div>
   );
